@@ -6,7 +6,15 @@
   <title>FPVTOKEN Roadmap</title>
   <style>
     * {
+  * {
   box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* ✅ stop side scroll */
+}
+
 }
 
 body {
@@ -175,24 +183,28 @@ body {
         transform: translateY(20px);
       }
     }
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 1.5rem;
+    padding-right: 1rem;
+  }
 
-  @media (max-width: 768px) {
   .timeline::after {
-    left: 20px;
-    margin-left: 0;
+    left: 15px; /* moves center line left */
   }
 
   .step {
     width: 100% !important;
-    padding: 1rem 1rem 1rem 3.5rem;
-    margin: 1.5rem 1rem;
+    left: 0 !important;
+    margin: 2rem 0;
+    padding: 1rem 1rem 1rem 3rem; /* add left space for dot */
   }
 
   .step::before {
-    top: 1.2rem;
-    left: 1rem !important;
+    left: 0.5rem !important;
     right: auto !important;
   }
+}
 
   h2 {
     font-size: 1.1rem;

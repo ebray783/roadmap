@@ -7,12 +7,13 @@
   <style>
     * {
   * {
+* {
   box-sizing: border-box;
 }
 html, body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* ✅ stop side scroll */
+  overflow-x: hidden;
 }
 
 }
@@ -184,31 +185,35 @@ body {
       }
     }
 @media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
   .timeline {
-    padding-left: 1.5rem;
+    padding-left: 2rem;
     padding-right: 1rem;
   }
 
   .timeline::after {
-    left: 15px; /* moves center line left */
+    left: 30px; /* Move timeline line a bit right */
   }
 
   .step {
-    width: 100% !important;
+    width: calc(100% - 3rem) !important; /* Don't reach edge */
     left: 0 !important;
     margin: 2rem 0;
-    padding: 1rem 1rem 1rem 3rem; /* add left space for dot */
+    padding: 1.5rem 1rem 1.5rem 4rem; /* More left padding */
   }
 
   .step::before {
-    left: 0.5rem !important;
+    left: 1rem !important;
     right: auto !important;
   }
-}
 
-  h2 {
-    font-size: 1.1rem;
+  h1 {
+    font-size: 2rem;
   }
+}
 
   p {
     font-size: 0.95rem;

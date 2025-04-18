@@ -8,6 +8,7 @@
     * {
   * {
 * {
+* {
   box-sizing: border-box;
 }
 html, body {
@@ -190,33 +191,31 @@ body {
   }
 
   .timeline {
-    padding-left: 2rem;
+    padding-left: 1rem;
     padding-right: 1rem;
   }
 
   .timeline::after {
-    left: 30px; /* Move timeline line a bit right */
+    left: 20px; /* Adjust timeline line to align with dots */
   }
 
-  .step {
-    width: calc(100% - 3rem) !important; /* Don't reach edge */
+  .step,
+  .step:nth-child(even),
+  .step:nth-child(odd) {
+    width: 100% !important;
     left: 0 !important;
     margin: 2rem 0;
-    padding: 1.5rem 1rem 1.5rem 4rem; /* More left padding */
+    padding: 1.5rem 1rem 1.5rem 3.5rem;
   }
 
   .step::before {
-    left: 1rem !important;
+    left: 10px !important;
     right: auto !important;
   }
 
   h1 {
     font-size: 2rem;
-  }
-}
-
-  p {
-    font-size: 0.95rem;
+    margin-bottom: 2rem;
   }
 }
 

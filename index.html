@@ -168,23 +168,33 @@
       }
     }
 
-    /* 📱 RESPONSIVE STYLE */
-    @media (max-width: 768px) {
-      .step, .step:nth-child(even), .step:nth-child(odd) {
-        width: 100%;
-        left: 0 !important;
-        padding-left: 3rem;
-      }
+  @media (max-width: 768px) {
+  .timeline::after {
+    left: 20px;
+    margin-left: 0;
+  }
 
-      .step::before {
-        left: 10px !important;
-        right: auto !important;
-      }
+  .step {
+    width: 100% !important;
+    padding: 1rem 1rem 1rem 3.5rem;
+    margin: 1.5rem 0;
+  }
 
-      .timeline::after {
-        left: 20px;
-      }
-    }
+  .step::before {
+    top: 1.2rem;
+    left: 1rem !important;
+    right: auto !important;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}
+
   </style>
 </head>
 <body>

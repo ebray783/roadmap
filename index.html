@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FPVTOKEN Roadmap</title>
+  <style>
+    body {
+       background: radial-gradient(circle at center, #000018, #0f0c29, #001f3f, #302b63, #24243e);
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    /* ✨ TITLE STYLE — Control the main title here */
+    h1 {
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: 2.5rem; /* 🔧 Change title size */
+      color: #00ffff;
+      text-shadow: 0 0 10px #00ffff;
+      animation: pulseGlow 2s infinite ease-in-out;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 1200px; /* 🔧 Timeline container max width */
+      margin: auto;
+    }
+
+    /* ✨ VERTICAL LINE */
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background: #00ffff;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+      animation: pulseLine 2s infinite ease-in-out;
+      z-index: 1;
+    }
+
+    /* ✨ STEP BLOCK STYLE */
+    .step {
+      padding: 1rem 2rem; /* 🔧 Change padding inside each step */
+      position: relative;
+      background-color: #111;
+      width: 35%;
+      border-radius: 6px;
+      margin: 0.5rem 0; /* 🔧 Space between steps */
+      box-shadow: 0 0 15px rgba(0,255,255,0.4);
+      animation: fadeIn 1s ease-in forwards;
+      opacity: 0;
+    }
+    /* 🔥 STEP COLORS - Cyberpunk Glow */
+.step:nth-child(1) {
+  background: linear-gradient(135deg, #00ffff, #004d4d);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+}
+.step:nth-child(2) {
+  background: linear-gradient(135deg, #ff00ff, #330033);
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.7);
+}
+.step:nth-child(3) {
+  background: linear-gradient(135deg, #00ff99, #003d2e);
+  box-shadow: 0 0 20px rgba(0, 255, 153, 0.7);
+}
+.step:nth-child(4) {
+  background: linear-gradient(135deg, #ff9900, #4d2600);
+  box-shadow: 0 0 20px rgba(255, 153, 0, 0.7);
+}
+.step:nth-child(5) {
+  background: linear-gradient(135deg, #3399ff, #001f33);
+  box-shadow: 0 0 20px rgba(51, 153, 255, 0.7);
+}
+.step:nth-child(6) {
+  background: linear-gradient(135deg, #cc00ff, #33004d);
+  box-shadow: 0 0 20px rgba(204, 0, 255, 0.7);
+}
+.step:nth-child(7) {
+  background: linear-gradient(135deg, #ff0033, #330000);
+  box-shadow: 0 0 20px rgba(255, 0, 51, 0.7);
+}
+
+
+    .step:nth-child(odd) {
+      left: 0;
+    }
+
+    .step:nth-child(even) {
+      left: 55%;
+    }
+
+    /* ✨ GLOWING DOT STYLE */
+    .step::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      width: 20px;  /* 🔧 Dot size */
+      height: 20px;
+      background-color: #00ffff;
+      border-radius: 50%;
+      z-index: 2;
+      box-shadow: 0 0 10px #00ffff;
+      animation: pulseDot 2s infinite ease-in-out;
+    }
+
+    .step:nth-child(odd)::before {
+      right: -10px;
+    }
+
+    .step:nth-child(even)::before {
+      left: -10px;
+    }
+
+    /* ✨ STEP HEADING (Time / Quarter) */
+    h2 {
+      font-size: 1.3rem; /* 🔧 Step header size */
+      color: #00ffff;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ✨ STEP DESCRIPTION */
+    p {
+      font-size: 1rem; /* 🔧 Step description size */
+      color: #ccc;
+    }
+
+    /* ✨ Animations */
+    @keyframes pulseGlow {
+      0%, 100% {
+        text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+      }
+      50% {
+        text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff;
+      }
+    }
+
+    @keyframes pulseDot {
+      0%, 100% {
+        box-shadow: 0 0 10px #00ffff;
+      }
+      50% {
+        box-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff;
+      }
+    }
+
+    @keyframes pulseLine {
+      0%, 100% {
+        background: #00ffff;
+      }
+      50% {
+        background: #00f2ff;
+      }
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+    }
+
+    /* 📱 RESPONSIVE STYLE */
+    @media (max-width: 768px) {
+      .step, .step:nth-child(even), .step:nth-child(odd) {
+        width: 100%;
+        left: 0 !important;
+        padding-left: 3rem;
+      }
+
+      .step::before {
+        left: 10px !important;
+        right: auto !important;
+      }
+
+      .timeline::after {
+        left: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✨ MAIN TITLE -->
+  <h1>FPVTOKEN - 6 Step Roadmap</h1>
+
+  <!-- ✨ ROADMAP ITEMS -->
+  <div class="timeline">
+
+    <!-- 🔧 STEP 1 -->
+    <div class="step">
+      <h2>Q2 2025</h2> <!-- 🔧 Edit time -->
+      <p>Generate FPV Token and Start Building Ecosystem</p> <!-- 🔧 Edit description -->
+    </div>
+
+    <!-- 🔧 STEP 2 -->
+    <div class="step">
+      <h2>Q3 2025</h2>
+      <p>Listing on DEX Platforms</p>
+    </div>
+
+    <!-- 🔧 STEP 3 -->
+    <div class="step">
+      <h2>Q4 2025</h2>
+      <p>NFT Minting + Rewards to Holders (50 NFTs every 6 months)</p>
+    </div>
+
+    <!-- 🔧 STEP 4 -->
+    <div class="step">
+      <h2>Q1 2026</h2>
+      <p>Listing on Centralized Exchanges: BingX, MEXC</p>
+    </div>
+
+    <!-- 🔧 STEP 5 -->
+    <div class="step">
+      <h2>Q2 2026</h2>
+      <p>Tier-1 Exchange Listings</p>
+    </div>
+
+    <!-- 🔧 STEP 6 -->
+    <div class="step">
+      <h2>Q4 2026</h2>
+      <p>Launch Metaverse FPV Product Line</p>
+    </div>
+
+    <!-- 🔧 STEP 7 -->
+    <div class="step">
+      <h2>Q1 2027</h2>
+      <p>FPV Simulating Game – Fly and Earn</p>
+    </div>
+  </div>
+
+</body>
+</html>
